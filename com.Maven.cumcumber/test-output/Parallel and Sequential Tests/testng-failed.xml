@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Parallel and Sequential Tests]">
+  <test thread-count="1" name="Parallel execution Tests (failed)" parallel="classes">
+    <classes>
+      <class name="sampleTest.OrangeHRMLogoutTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testOnABSoft"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- sampleTest.OrangeHRMLogoutTest -->
+      <class name="sampleTest.LaunchChrome">
+        <methods>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- sampleTest.LaunchChrome -->
+      <class name="sampleTest.OrangeHRMLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="testOnABSoft"/>
+        </methods>
+      </class> <!-- sampleTest.OrangeHRMLogin -->
+    </classes>
+  </test> <!-- Parallel execution Tests (failed) -->
+  <test thread-count="1" name="Sequential Execution Tests(failed)">
+    <classes>
+      <class name="sampleTest.AmazonDropDownTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="newToursLoginTest"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- sampleTest.AmazonDropDownTest -->
+    </classes>
+  </test> <!-- Sequential Execution Tests(failed) -->
+</suite> <!-- Failed suite [Parallel and Sequential Tests] -->

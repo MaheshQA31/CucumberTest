@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel and Sequential Tests" thread-count="1"
+	verbose="1" annotations="JDK">
+	<test name="Parallel execution Tests " parallel="classes">
+		<classes>
+			<class name="sampleTest.OrangeHRMLogin" />
+			<class name="sampleTest.LaunchChrome" />
+			<class name="sampleTest.NewToursLogin" />
+			<class name="sampleTest.OrangeHRMLogoutTest" />
+		</classes>
+	</test>
+	<test name="Sequential Execution Tests" parallel="false">
+		<classes>
+			<class name="sampleTest.AmazonDropDownTest" />
+			<class name="sampleTest.GmailLinksVerify" />
+			<class name="sampleTest.FacebookLogin" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
